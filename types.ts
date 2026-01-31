@@ -19,16 +19,16 @@ export interface EyePrescription {
   cylinder: string;
   axis: string;
   add?: string;
-  pd?: string; // Pupillary Distance
-  height?: string; // Fitting Height
+  pd?: string; 
+  height?: string; 
 }
 
 export interface Prescription {
   id: string;
   date: string;
   doctorName: string;
-  od: EyePrescription; // Right Eye
-  oe: EyePrescription; // Left Eye
+  od: EyePrescription;
+  oe: EyePrescription;
   notes?: string;
 }
 
@@ -68,25 +68,11 @@ export interface Order {
   paymentStatus: PaymentStatus;
   prescriptionId: string;
   frameModel: string;
-  frameNotes?: string;
+  frameNotes?: string; // Observações da armação
   lensType: string;
-  lensNotes?: string;
+  lensNotes?: string;  // Observações das lentes
   deliveryDate: string;
 }
-
-export interface KPIData {
-  totalSales: number;
-  ordersCount: number;
-  pendingLabs: number;
-  averageTicket: number;
-}
-
-export interface ChartData {
-  name: string;
-  value: number;
-}
-
-// --- ERP New Types ---
 
 export type ProductCategory = 'FRAME' | 'LENS' | 'ACCESSORY' | 'SERVICE';
 
@@ -101,7 +87,7 @@ export interface Product {
   salesPrice: number;
   stockLevel: number;
   minStockLevel: number;
-  soldCount: number; // For ranking
+  soldCount: number;
 }
 
 export type TransactionType = 'IN' | 'OUT';
