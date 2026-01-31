@@ -151,31 +151,11 @@ const Inventory: React.FC = () => {
                                     </span>
                                     {isLowStock && <div className="text-[10px] text-red-600 mt-1 font-medium">Repor Estoque</div>}
                                 </td>
-                                <td className="px-6 py-4 text-right text-gray-600 font-medium">
+                                <td className="px-6 py-4 text-right text-gray-600 font-medium italic">
                                     {formatCurrency(product.costPrice)}
                                 </td>
-                                <td className="px-6 py-4 text-right font-medium text-gray-900">
+                                <td className="px-6 py-4 text-right font-bold text-gray-900">
                                     {formatCurrency(product.salesPrice)}
                                 </td>
                                 <td className="px-6 py-4 text-right">
-                                    <span className={`text-xs font-bold ${margin > 50 ? 'text-green-600' : 'text-yellow-600'}`}>
-                                        {margin.toFixed(1)}%
-                                    </span>
-                                </td>
-                                <td className="px-6 py-4 text-right">
-                                    <button className="text-blue-600 hover:text-blue-800 font-medium text-sm">
-                                        Editar
-                                    </button>
-                                </td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Inventory;
+                                    <
